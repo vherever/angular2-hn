@@ -7,6 +7,7 @@ import { AppComponent }  from './components/app.component';
 import {HeaderComponent} from "./components/header.component";
 import {StoriesComponent} from "./components/stories.component";
 import {FooterComponent} from "./components/footer.component";
+import {ItemComponent} from "./components/item.component";
 
 @NgModule({
     imports:      [
@@ -18,7 +19,8 @@ import {FooterComponent} from "./components/footer.component";
         AppComponent,
         HeaderComponent,
         StoriesComponent,
-        FooterComponent
+        FooterComponent,
+        ItemComponent
     ],
     providers: [],
     bootstrap: [ AppComponent ]
