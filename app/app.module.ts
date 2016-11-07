@@ -8,6 +8,7 @@ import {HeaderComponent} from "./components/header.component";
 import {StoriesComponent} from "./components/stories.component";
 import {FooterComponent} from "./components/footer.component";
 import {ItemComponent} from "./components/item.component";
+import {HackerNewsAPIService} from "./services/hackernews-api";
 
 @NgModule({
     imports:      [
@@ -22,7 +23,7 @@ import {ItemComponent} from "./components/item.component";
         FooterComponent,
         ItemComponent
     ],
-    providers: [],
+    providers: [ HackerNewsAPIService ],
     bootstrap: [ AppComponent ]
 })
 export class AppModule { }
