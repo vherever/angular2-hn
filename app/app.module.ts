@@ -9,12 +9,14 @@ import {StoriesComponent} from "./components/stories.component";
 import {FooterComponent} from "./components/footer.component";
 import {ItemComponent} from "./components/item.component";
 import {HackerNewsAPIService} from "./services/hackernews-api";
+import {MomentModule} from "angular2-moment";
 
 @NgModule({
     imports:      [
         BrowserModule,
         FormsModule,
-        HttpModule
+        HttpModule,
+        MomentModule
     ],
     declarations: [
         AppComponent,

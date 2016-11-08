@@ -1,1 +1,3 @@
-<div *ngIf="item">{{item.title}}</div>
+<div *ngIf="item">{{item.title}}
+    {{ (item.time | amFromUnix) | amTimeAgo }}
+</div>
