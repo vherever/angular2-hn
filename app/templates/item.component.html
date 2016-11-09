@@ -1,3 +1,35 @@
-<div *ngIf="item">{{item.title}}
-    {{ (item.time | amFromUnix) | amTimeAgo }}
+<div *ngIf="!item" class="loading-section">
+loading...
 </div>
+<div *ngIf="item" class="item">
+    <a class="link title" href="{{item.url}}">
+        {{item.title}}
+    </a>
+    <div class="domain">{{item.url | url}}</div>
+    <div>
+        <span>{{item.score}}</span> points by
+        <a href="{{item.by}}" class="link user">{{item.by}}</a>
+        {{ (item.time | amFromUnix) | amTimeAgo }}
+        <a href="#" class="comments">
+            <span *ngIf="item.descendants !== 0">
+              {{item.descendants}}
+              <span *ngIf="item.descendants === 1"> comment</span>
+              <span *ngIf="item.descendants > 1"> comments</span>
+            </span>
+            <span *ngIf="item.descendants === 0">discuss</span>
+        </a>
+    </div>
+    <div class="item-mobile">
+    </div>
+</div>
+<style>
+    a.title {
+        text-transform: uppercase;
+    }
+    .link {
+        color: #f0ad4e !important;
+    }
+    a.title, a.user {
+        text-decoration: none;
+    }
+</style>
